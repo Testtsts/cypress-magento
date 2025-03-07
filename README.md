@@ -1,5 +1,5 @@
 # cypress-magento
-##pre-requisite
+## pre-requisite
 
 Node.js 18.x, 20.x, 22.x and above
 
@@ -15,7 +15,7 @@ Yarn 1 (Classic)	1.22.22 and above
 Yarn (Modern aka berry)	4.x and above	
 pnpm	8.x and above
 
-##How to run
+## How to run
 extract from zip
 type and execute in terminal: npm i
 type and execute in terminal: npm run cy:run
