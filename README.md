@@ -17,7 +17,9 @@ Yarn (Modern aka berry)	4.x and above	\
 pnpm	8.x and above
 
 ## How to run
-extract from zip\
-type and execute in terminal: npm i\
-type and execute in terminal: npm run cy:run\
+in terminal: 
+1. git clone https://github.com/Testtsts/cypress-magento.git
+2. cd cypress-magento
+3. npm i
+4. npm run cy:run
 
