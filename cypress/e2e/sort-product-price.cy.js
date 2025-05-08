@@ -10,7 +10,9 @@ describe('sort by price', () => {
 
 	it('sort by price ascending should have item sorted by cheapest first', () => {
 		CatalogSearch.sortByPrice();
+		cy.url().should('contain',"product_list_order=price")
 		CatalogSearch.getSortSwitcher().click();
+		cy.url().should('contain',"product_list_dir=asc")
 		CatalogSearch.getItemsPrice().then((el)=>{
 			const innerText = ($el) => $el.innerText
 			const digits = (str) => str.replace(/[^0-9.]/g, '')
@@ -22,6 +24,7 @@ describe('sort by price', () => {
 
 	it('sort by price descending should have item sorted by most expensive first', () => {
 		CatalogSearch.sortByPrice();
+		cy.url().should('contain',"product_list_order=price")
 		CatalogSearch.getItemsPrice().then((el)=>{
 			const innerText = ($el) => $el.innerText
 			const digits = (str) => str.replace(/[^0-9.]/g, '')
