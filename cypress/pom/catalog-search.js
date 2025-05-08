@@ -16,7 +16,8 @@ exports.CatalogSearch = class CatalogSearch {
   }
 
   static sortByPrice(){
-    return this.getSorter().select("price");
+    this.getSorter().select("Price");
+    return this.getSorter().should('have.text','Price');
   }
 
 }

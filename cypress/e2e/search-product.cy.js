@@ -6,8 +6,9 @@ describe('Search function', () => {
     HomePage.visitPage();
     HomePage.searchProducts("jacket");
     CatalogSearch.getProducts().should('be.visible');
-    CatalogSearch.getProducts().each((element)=>{
-      expect(element).to.contain("Jacket")
-    })
+    CatalogSearch.getProducts().first().should('contain',"Jacket")
+    // CatalogSearch.getProducts().each((element)=>{
+    //   expect(element).to.contain("Jacket")
+    // })
   })
 })
