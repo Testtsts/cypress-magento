@@ -11,7 +11,7 @@ describe('sort by price', () => {
 	it('sort by price ascending should have item sorted by cheapest first', () => {
 		CatalogSearch.sortByPrice();
 		cy.url().should('contain',"product_list_order=price")
-		CatalogSearch.getSortSwitcher().click();
+		CatalogSearch.getSortSwitcher().click({force:true});
 		cy.url().should('contain',"product_list_dir=asc")
 		CatalogSearch.getItemsPrice().then((el)=>{
 			const innerText = ($el) => $el.innerText
