@@ -16,7 +16,7 @@ exports.CatalogSearch = class CatalogSearch {
   }
 
   static sortByPrice(){
-    this.getSorter().select("Price");
+    return this.getSorter().select("Price");
     // return this.getSorter().find("[selected='selected']").contains('Price').should('exist');
   }
 
