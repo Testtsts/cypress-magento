@@ -4,8 +4,12 @@ exports.InventoryPage = class InventoryPage{
         return cy.get('[data-test="inventory-item"] button').eq(index).click();
 
     }
-    static getItemCount(){
-        return cy.get('[data-test="inventory-item"] button').its('length');
+    static getItemCount(indexVariable){
+        return cy.get('[data-test="inventory-item"] button').its('length').as(indexVariable);
+    }
+
+    static getShoppingCartBadge(){
+        return cy.get('[data-test="shopping-cart-badge"]');
     }
 }
 
