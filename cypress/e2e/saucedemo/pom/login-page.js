@@ -2,7 +2,7 @@ exports.LoginPage = class LoginPage{
     
     static goto(){
         cy.visit('https://www.saucedemo.com/');
-        return cy.url().should('contain', "Swag Labs");
+        return cy.get('.login_logo').should('contain', "Swag Labs");
     }
 
     static writeUserName(userName){
