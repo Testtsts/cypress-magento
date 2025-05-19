@@ -5,7 +5,8 @@ exports.InventoryPage = class InventoryPage{
 
     }
     static getItemCount(indexVariable){
-        return cy.get('[data-test="inventory-item"] button').its('length').as(indexVariable);
+        // return cy.get('[data-test="inventory-item"] button').its('length').as(indexVariable);
+        return cy.get('[data-test="inventory-item"] button').its('length');
     }
 
     static getShoppingCartBadge(){
