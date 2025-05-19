@@ -10,7 +10,7 @@ exports.CheckoutComplete = class CheckoutComplete{
     }
 
     static fillLastName(lastName){
-        return cy.get('[data-test="lasttName"]').type(lastName);
+        return cy.get('[data-test="lastName"]').type(lastName);
     }
 
     static fillPostalCode(postalCode){
