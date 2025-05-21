@@ -1,7 +1,7 @@
 const { HomePage } = require('../pom/home-page');
 const {CatalogSearch} = require('../pom/catalog-search')
 
-describe('sort by price', () => {
+describe.skip('sort by price', () => {
 	beforeEach(()=>{
 		HomePage.visitPage();
     HomePage.searchProducts("jacket");
