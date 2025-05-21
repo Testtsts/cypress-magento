@@ -20,11 +20,8 @@ exports.HomePage = class Homepage {
       // },
     });
     cy.window().then((win) => {
-      // Here, you might directly call 'win.dispatchEvent' as you’ve done before or check some condition
       if (win.document.readyState === 'complete') {
-        // Your logic if the page is ready
       } else {
-        // Force the 'load' event if needed
         const loadEvent = new Event('load');
         win.dispatchEvent(loadEvent);
       }
