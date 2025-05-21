@@ -42,7 +42,10 @@ exports.HomePage = class Homepage {
   static clickProfilDokter() {
     return cy.contains('Profil Dokter')
     .invoke('removeAttr','target')
-    .click({ animationDistanceThreshold: 10 });
+    .click({ 
+      animationDistanceThreshold: 20,
+      force:true
+     });
   }
 
   static clickCommunityMenu() {
