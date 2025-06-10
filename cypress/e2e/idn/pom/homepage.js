@@ -3,10 +3,10 @@
 exports.HomePage = class Homepage {
   static visit() {
 
-    cy.intercept('GET', 'https://*googlesyndication.com*', { statusCode: 200, body: {} }).as('mockedRequest');
+    // cy.intercept('GET', 'https://*googlesyndication.com*', { statusCode: 200, body: {} }).as('mockedRequest');
 
-    cy.visit('https://www.idntimes.com/',{
-      waitForAnimations: false,
+    // cy.visit('https://www.idntimes.com/',{
+    //   waitForAnimations: false,
 
       // onBeforeLoad: (win) => {
       //   // cy.stub(win,)
@@ -18,17 +18,17 @@ exports.HomePage = class Homepage {
       //     });
       //   });
       // },
-    });
-    cy.window().then((win) => {
-      if (win.document.readyState === 'complete') {
-      } else {
-        const loadEvent = new Event('load');
-        win.dispatchEvent(loadEvent);
-      }
-    });
+    // });
+    // cy.window().then((win) => {
+    //   if (win.document.readyState === 'complete') {
+    //   } else {
+    //     const loadEvent = new Event('load');
+    //     win.dispatchEvent(loadEvent);
+    //   }
+    // });
 
-    
-    cy.get('[data-testid="header-logo-img"]'  ).should('be.visible');
+    cy.visit('https://www.idntimes.com/');
+    // cy.get('[data-testid="header-logo-img"]'  ).should('be.visible');
   }
 
   static clickGenZMemilih() {
