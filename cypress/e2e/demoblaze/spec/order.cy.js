@@ -15,7 +15,18 @@ describe("Demo Blaze Order", function(){
         DemoBlazePom.selectItemByName("Nokia lumia 1520");
         DemoBlazePom.addToCart();
         DemoBlazePom.goToCart();
-        DemoBlazePom.getTotalPrice().should('have.text', "1180")
+        DemoBlazePom.getTotalPrice().should('have.text', "1180");
+        DemoBlazePom.placeOrder();
+        DemoBlazePom.fillName(faker.person.fullName())
+        DemoBlazePom.fillCountry("Indonesia");
+        DemoBlazePom.fillCity(faker.location.city());
+        DemoBlazePom.fillCard(faker.finance.accountNumber());
+        DemoBlazePom.fillMonth(faker.date.month());
+        DemoBlazePom.fillYear("2030");
+        DemoBlazePom.clickPurchase();
+        DemoBlazePom.closeOrderSummary();
+        cy.reload()
+        DemoBlazePom.getTotalPrice().should('not.be.visible');
     })
 
     it("should success delete item from cart", ()=>{
