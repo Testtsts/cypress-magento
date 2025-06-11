@@ -4,7 +4,7 @@ exports.DemoBlazePom = class DemoBlazePom{
     }
 
     static selectItemByName(itemName){
-        return cy.get(".card-title").contains(itemName).click();
+        return cy.get(".hrefch").contains(itemName).click();
     }
 
     static addToCart(){
