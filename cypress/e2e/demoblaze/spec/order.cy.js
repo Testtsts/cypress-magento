@@ -6,11 +6,13 @@ describe("Demo Blaze Order", function(){
 
     beforeEach(()=>{
         DemoBlazePom.visit();
+        cy.url().should("eq",HOMEPAGE_URL)
     })
     
     it("should success order item from cart", ()=>{
         DemoBlazePom.selectItemByName("Samsung galaxy s6");
         DemoBlazePom.addToCart();
+        cy.reload();
         cy.go(-2);
         DemoBlazePom.selectItemByName("Nokia lumia 1520");
         DemoBlazePom.addToCart();
@@ -32,12 +34,15 @@ describe("Demo Blaze Order", function(){
     it("should success delete item from cart", ()=>{
         DemoBlazePom.selectItemByName("Samsung galaxy s6");
         DemoBlazePom.addToCart();
+        cy.reload()
         cy.go(-2);
         DemoBlazePom.selectItemByName("Sony xperia z5");
         DemoBlazePom.addToCart();
+        cy.reload()
         cy.go(-2);
         DemoBlazePom.selectItemByName("HTC One M9");
         DemoBlazePom.addToCart();
+        cy.reload()
         cy.go(-2);
         DemoBlazePom.selectItemByName("Nexus 6");
         DemoBlazePom.addToCart();
