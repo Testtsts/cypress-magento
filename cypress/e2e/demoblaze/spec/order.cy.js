@@ -48,7 +48,6 @@ describe("Demo Blaze Order", function(){
         DemoBlazePom.addToCart();
         DemoBlazePom.goToCart();
         DemoBlazePom.getTotalPrice().should('have.text', "2030")
-        // DemoBlazePom.deleteTopItem();
         DemoBlazePom.removeItemFromCartByName("HTC One M9")
         DemoBlazePom.getTotalPrice().should('have.text', "1330")
     })
