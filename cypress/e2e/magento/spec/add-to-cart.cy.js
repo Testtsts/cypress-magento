@@ -10,8 +10,8 @@ describe("add to cart function", ()=>{
 		HomePage.searchProducts("Pierce");
 		CatalogSearch.getProducts().should('be.visible');
 		CatalogSearch.getProducts().first().click();
-		ProductDetail.getColorOption().first().click();
 		ProductDetail.getSizeOption().first().click();
+		ProductDetail.getColorOption().first().click();
 		ProductDetail.fillQtyField(5);
 		ProductDetail.addToCartButton().click();
 		GlobalElements.getCartCounter().should('contain.text',15);
