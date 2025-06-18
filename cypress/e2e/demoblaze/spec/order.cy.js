@@ -26,8 +26,8 @@ describe("Demo Blaze Order", function(){
         DemoBlazePom.fillYear("2030");
         DemoBlazePom.clickPurchase();
         DemoBlazePom.closeOrderSummary();
-        cy.reload()
-        DemoBlazePom.getTotalPrice().should('not.be.visible');
+        // DemoBlazePom.goToCart();
+        DemoBlazePom.getTotalPrice().should('have.text','');
     })
 
     it("should success delete item from cart", ()=>{
