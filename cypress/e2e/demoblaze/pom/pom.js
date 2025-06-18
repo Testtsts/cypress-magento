@@ -58,6 +58,10 @@ exports.DemoBlazePom = class DemoBlazePom{
     static closeOrderSummary(){
         return cy.get(".confirm.btn.btn-lg.btn-primary").click();
     }
+
+    static clickHomeButton(){
+        return cy.get("#nava").click();
+    }
     
 }
 

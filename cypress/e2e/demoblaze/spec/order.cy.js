@@ -12,8 +12,7 @@ describe("Demo Blaze Order", function(){
     it("should success order item from cart", ()=>{
         DemoBlazePom.selectItemByName("Samsung galaxy s6");
         DemoBlazePom.addToCart();
-        cy.reload();
-        cy.go(-2);
+        DemoBlazePom.clickHomeButton();
         DemoBlazePom.selectItemByName("Nokia lumia 1520");
         DemoBlazePom.addToCart();
         DemoBlazePom.goToCart();
@@ -34,16 +33,13 @@ describe("Demo Blaze Order", function(){
     it("should success delete item from cart", ()=>{
         DemoBlazePom.selectItemByName("Samsung galaxy s6");
         DemoBlazePom.addToCart();
-        cy.reload()
-        cy.go(-2);
+        DemoBlazePom.clickHomeButton();
         DemoBlazePom.selectItemByName("Sony xperia z5");
         DemoBlazePom.addToCart();
-        cy.reload()
-        cy.go(-2);
+        DemoBlazePom.clickHomeButton();
         DemoBlazePom.selectItemByName("HTC One M9");
         DemoBlazePom.addToCart();
-        cy.reload()
-        cy.go(-2);
+        DemoBlazePom.clickHomeButton();
         DemoBlazePom.selectItemByName("Nexus 6");
         DemoBlazePom.addToCart();
         DemoBlazePom.goToCart();
