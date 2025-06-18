@@ -2,8 +2,8 @@
 const {MenuPage,ONLINE_ORDER_URL} = require('../pom/menu-page');
 
 
-describe("serlok online menu order", ()=> {
-    it('Should able to see order summary', function(){
+describe("Serlok Kopi - Online Menu Order", ()=> {
+    it('Should Show Order Summary Before Completing Order', function(){
         cy.visit(ONLINE_ORDER_URL);
         MenuPage.typeTableNumField("180");
         MenuPage.clickInputTableNum();

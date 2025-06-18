@@ -7,9 +7,9 @@ const {LoginPage} = require('../pom/login-page')
 const STANDARD_USERNAME = "standard_user";
 const GENERIC_PASSWORD = "secret_sauce";
 
-describe('full flow',  function (){
+describe('Swag Labs SauceDemo - Order',  function (){
 
-    it('e2e', ()=>{
+    it('Should Receive Order Complete Message After Finishing Order', ()=>{
         LoginPage.goto();
         LoginPage.writeUserName(STANDARD_USERNAME);
         LoginPage.writePassword(GENERIC_PASSWORD);

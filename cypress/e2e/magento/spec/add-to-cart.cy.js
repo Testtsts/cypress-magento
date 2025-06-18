@@ -4,8 +4,8 @@ const {ProductDetail} = require('../pom/product-detail');
 const {GlobalElements} = require('../pom/global-element');
 
 
-describe("add to cart function", ()=>{
-	it("should succeed adding item to cart with selected size and color", ()=>{
+describe("Magento Software Testing Boardas - Add to cart", ()=>{
+	it("Adding Item to Cart with Selected Size and Color Should Show in Cart Badge", ()=>{
 		HomePage.visitPage();
 		HomePage.searchProducts("Pierce");
 		CatalogSearch.getProducts().should('be.visible');
